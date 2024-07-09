@@ -1,0 +1,270 @@
+==============================================================================
+20240125 14:04:50.025 - INFO - + START SUITE: Wdu [ ]
+==============================================================================
+20240125 14:04:50.026 - INFO - +- START TEST: Inserting the sales data for the week [ ]
+------------------------------------------------------------------------------
+20240125 14:04:50.027 - INFO - +-- START KEYWORD: Open The Internet Website [ ]
+20240125 14:04:50.027 - INFO - +--- START KEYWORD: Autosphere.Browser.Open Available Browser [ http://training.autosphere.ai/#/ ]
+20240125 14:04:50.032 - INFO - Creating an instance of the Chrome WebDriver.
+20240125 14:04:53.796 - INFO - ====== WebDriver manager ======
+20240125 14:04:57.622 - INFO - Downloaded webdriver to: C:\Users\LENOVO T480\AppData\Local\autosphere\webdrivers\.wdm\drivers\chromedriver\win64\121.0.6167.85\chromedriver-win32/chromedriver.exe
+20240125 14:04:57.622 - INFO - Creating an instance of the Chrome WebDriver.
+20240125 14:05:00.102 - DEBUG - Created Chrome WebDriver instance with session id ac19010e97fdfe4950d3bbfdce0eb0c8.
+20240125 14:05:00.102 - INFO - Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+20240125 14:05:00.103 - INFO - <p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 121.0.6167.85 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DC1382B2+55298]
+	(No symbol) [0x00007FF6DC0A5E02]
+	(No symbol) [0x00007FF6DBF605AB]
+	(No symbol) [0x00007FF6DBF93E72]
+	(No symbol) [0x00007FF6DBF932FE]
+	(No symbol) [0x00007FF6DBF8EC6C]
+	(No symbol) [0x00007FF6DBF8B30E]
+	(No symbol) [0x00007FF6DBFCA198]
+	(No symbol) [0x00007FF6DBFC9CB0]
+	(No symbol) [0x00007FF6DBFC1E83]
+	(No symbol) [0x00007FF6DBF9670A]
+	(No symbol) [0x00007FF6DBF97964]
+	GetHandleVerifier [0x00007FF6DC4B0AAB+3694587]
+	GetHandleVerifier [0x00007FF6DC50728E+4048862]
+	GetHandleVerifier [0x00007FF6DC4FF173+4015811]
+	GetHandleVerifier [0x00007FF6DC1D47D6+695590]
+	(No symbol) [0x00007FF6DC0B0CE8]
+	(No symbol) [0x00007FF6DC0ACF34]
+	(No symbol) [0x00007FF6DC0AD062]
+	(No symbol) [0x00007FF6DC09D3A3]
+	BaseThreadInitThunk [0x00007FFFD383257D+29]
+	RtlUserThreadStart [0x00007FFFD522AA58+40]
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+20240125 14:05:00.103 - INFO - Opening url 'http://training.autosphere.ai/#/'
+20240125 14:05:02.338 - INFO - +--- END KEYWORD: Autosphere.Browser.Open Available Browser (12311)
+20240125 14:05:02.338 - INFO - +-- END KEYWORD: Open The Internet Website (12311)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240125 14:05:02.338 - INFO - +-- START KEYWORD: Log In [ ]
+20240125 14:05:02.339 - INFO - +--- START KEYWORD: Autosphere.Browser.Input Text [ id=username | developer ]
+20240125 14:05:02.339 - INFO - Typing text 'developer' into text field 'id=username'.
+20240125 14:05:02.443 - INFO - +--- END KEYWORD: Autosphere.Browser.Input Text (104)
+20240125 14:05:02.444 - INFO - +--- START KEYWORD: Autosphere.Browser.Input Password [ id=password | autosphere ]
+20240125 14:05:02.445 - INFO - Typing password into text field 'id=password'.
+20240125 14:05:02.479 - INFO - Temporally setting log level to: NONE
+20240125 14:05:02.479 - INFO - Log level changed from INFO to NONE.
+20240125 14:05:02.518 - INFO - Log level changed from NONE to INFO.
+20240125 14:05:02.518 - INFO - +--- END KEYWORD: Autosphere.Browser.Input Password (74)
+20240125 14:05:02.518 - INFO - +--- START KEYWORD: Autosphere.Browser.Submit Form [ ]
+20240125 14:05:02.519 - INFO - Submitting form 'None'.
+20240125 14:05:02.540 - INFO - +--- END KEYWORD: Autosphere.Browser.Submit Form (22)
+20240125 14:05:02.540 - INFO - +--- START KEYWORD: Autosphere.Browser.Wait Until Page Contains Element [ id=firstname ]
+20240125 14:05:04.986 - INFO - +--- END KEYWORD: Autosphere.Browser.Wait Until Page Contains Element (2446)
+20240125 14:05:04.986 - INFO - +-- END KEYWORD: Log In (2648)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240125 14:05:04.986 - INFO - +-- START KEYWORD: Read from Excel file and fill the form for all users [ ]
+20240125 14:05:04.987 - INFO - +--- START KEYWORD: Autosphere.Excel.Files.Open Workbook [ SalesData.xlsx ]
+20240125 14:05:05.002 - INFO - Opened workbook: <Autosphere.Excel.Files.XlsxWorkbook object at 0x0000015B968212C8>
+20240125 14:05:05.002 - INFO - +--- END KEYWORD: Autosphere.Excel.Files.Open Workbook (15)
+20240125 14:05:05.002 - INFO - +--- START KEYWORD: Autosphere.Excel.Files.Read Worksheet As Table [ header=True ]
+20240125 14:05:05.003 - INFO - Created table: Table(columns=['First Name', 'Last Name', 'Sales', 'Sales Target'], rows=1)
+20240125 14:05:05.089 - INFO - <IPython.core.display.Markdown object>
+<IPython.core.display.Markdown object>
+20240125 14:05:05.089 - INFO - ${salesReps} = Table(columns=['First Name', 'Last Name', 'Sales', 'Sales Target'], rows=1)
+20240125 14:05:05.090 - INFO - +--- END KEYWORD: Autosphere.Excel.Files.Read Worksheet As Table (88)
+20240125 14:05:05.090 - INFO - +--- START KEYWORD: Autosphere.Excel.Files.Close Workbook [ ]
+20240125 14:05:05.090 - INFO - Closing workbook: <Autosphere.Excel.Files.XlsxWorkbook object at 0x0000015B968212C8>
+20240125 14:05:05.090 - INFO - +--- END KEYWORD: Autosphere.Excel.Files.Close Workbook (0)
+20240125 14:05:05.090 - INFO - +--- START FOR: ${salesRep} IN [ @{salesReps} ] [ ]
+20240125 14:05:05.091 - INFO - +---- START ITERATION: ${salesRep} = {'First Name': 'Andrea', 'Last Name': 'Alexander', 'Sales': 90230, 'Sales Target': 60000} [ ]
+20240125 14:05:05.092 - INFO - +----- START KEYWORD: Fill and Submit the form for a user [ ${salesRep} ]
+20240125 14:05:05.092 - INFO - +------ START KEYWORD: Autosphere.Browser.Input Text [ firstname | ${salesRep}[First Name] ]
+20240125 14:05:05.093 - INFO - Typing text 'Andrea' into text field 'firstname'.
+20240125 14:05:05.159 - INFO - +------ END KEYWORD: Autosphere.Browser.Input Text (67)
+20240125 14:05:05.159 - INFO - +------ START KEYWORD: Autosphere.Browser.Input Text [ lastname | ${salesRep}[Last Name] ]
+20240125 14:05:05.160 - INFO - Typing text 'Alexander' into text field 'lastname'.
+20240125 14:05:05.231 - INFO - +------ END KEYWORD: Autosphere.Browser.Input Text (72)
+20240125 14:05:05.231 - INFO - +------ START KEYWORD: Autosphere.Browser.Input Text [ salesresult | ${salesRep}[Sales] ]
+20240125 14:05:05.232 - INFO - Typing text '90230' into text field 'salesresult'.
+20240125 14:05:05.302 - INFO - +------ END KEYWORD: Autosphere.Browser.Input Text (71)
+20240125 14:05:05.302 - INFO - +------ START KEYWORD: BuiltIn.Convert To String [ ${salesRep}[Sales Target] ]
+20240125 14:05:05.303 - DEBUG - Argument types are:
+<class 'int'>
+20240125 14:05:05.303 - INFO - ${target_as_string} = 60000
+20240125 14:05:05.303 - INFO - +------ END KEYWORD: BuiltIn.Convert To String (1)
+20240125 14:05:05.303 - INFO - +------ START KEYWORD: Autosphere.Browser.Select From List By Value [ salestarget | ${target_as_string} ]
+20240125 14:05:05.303 - INFO - Selecting options from selection list 'salestarget' by value 60000.
+20240125 14:05:05.365 - INFO - +------ END KEYWORD: Autosphere.Browser.Select From List By Value (62)
+20240125 14:05:05.365 - INFO - +------ START KEYWORD: Autosphere.Browser.Click Button [ Submit ]
+20240125 14:05:05.365 - INFO - Clicking button 'Submit'.
+20240125 14:05:05.539 - INFO - +------ END KEYWORD: Autosphere.Browser.Click Button (174)
+20240125 14:05:05.539 - INFO - +----- END KEYWORD: Fill and Submit the form for a user (447)
+20240125 14:05:05.539 - INFO - +---- END ITERATION: ${salesRep} = {'First Name': 'Andrea', 'Last Name': 'Alexander', 'Sales': 90230, 'Sales Target': 60000} (448)
+20240125 14:05:05.539 - INFO - +--- END FOR: ${salesRep} IN [ @{salesReps} ] (449)
+20240125 14:05:05.539 - INFO - +-- END KEYWORD: Read from Excel file and fill the form for all users (553)
+------------------------------------------------------------------------------
+20240125 14:05:05.540 - INFO - +- END TEST: Inserting the sales data for the week (15514)
+------------------------------------------------------------------------------
+20240125 14:05:05.540 - INFO - +- START TEST: Collecting the results [ ]
+------------------------------------------------------------------------------
+20240125 14:05:05.541 - INFO - +-- START KEYWORD: Taking screenshot of the results [ ]
+20240125 14:05:05.542 - INFO - +--- START KEYWORD: Autosphere.Browser.Capture Element Screenshot [ css:div.sales-summary | C:/Users/LENOVO T480/Documents/workspace/Autosphere_Demo/Weekly_Data_Update/test.png ]
+20240125 14:05:05.777 - INFO - </td></tr><tr><td colspan="3"><a href="../../../Autosphere_Demo/Weekly_Data_Update/test.png"><img src="../../../Autosphere_Demo/Weekly_Data_Update/test.png" width="400px"></a>
+20240125 14:05:05.778 - INFO - +--- END KEYWORD: Autosphere.Browser.Capture Element Screenshot (236)
+20240125 14:05:05.778 - INFO - +-- END KEYWORD: Taking screenshot of the results (237)
+------------------------------------------------------------------------------
+20240125 14:05:05.778 - INFO - +- END TEST: Collecting the results (238)
+------------------------------------------------------------------------------
+20240125 14:05:05.779 - INFO - +- START TEST: Creating PDF of the results [ ]
+------------------------------------------------------------------------------
+20240125 14:05:05.779 - INFO - +-- START KEYWORD: Export the table as HTML [ ]
+20240125 14:05:05.779 - INFO - +--- START KEYWORD: Autosphere.Browser.Wait Until Element Is Visible [ id:sales-results ]
+20240125 14:05:05.804 - INFO - +--- END KEYWORD: Autosphere.Browser.Wait Until Element Is Visible (25)
+20240125 14:05:05.804 - INFO - +--- START KEYWORD: Autosphere.Browser.Get Element Attribute [ id:sales-results | outerHTML ]
+20240125 14:05:05.823 - INFO - ${sales_results_html} = <div id="sales-results"><table class="table table-dark table-striped"><thead><tr><th width="250" scope="col">Name</th><th width="250" scope="col">Target</th><th width="250" scope="col">Result</th><th ...
+20240125 14:05:05.823 - INFO - +--- END KEYWORD: Autosphere.Browser.Get Element Attribute (19)
+20240125 14:05:05.823 - INFO - +--- START KEYWORD: Autosphere.FileSystem.Create File [ ./Results/sales_results.template | ${sales_results_html} | overwrite=True ]
+20240125 14:05:05.824 - INFO - +--- END KEYWORD: Autosphere.FileSystem.Create File (1)
+20240125 14:05:05.825 - INFO - +-- END KEYWORD: Export the table as HTML (46)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240125 14:05:05.825 - INFO - +-- START KEYWORD: Convert HTML to PDF [ ]
+20240125 14:05:05.825 - INFO - +--- START KEYWORD: Autosphere.PDF.Template Html To Pdf [ ./Results/sales_results.template | ./Results/sales_results.pdf ]
+20240125 14:05:05.827 - INFO - Writing output to file C:\Users\LENOVO T480\Documents\workspace\Kamran_Haq\WDU_Process\results\sales_results.pdf
+20240125 14:05:05.916 - INFO - maxp pruned
+20240125 14:05:05.916 - INFO - cmap pruned
+20240125 14:05:05.918 - INFO - post pruned
+20240125 14:05:05.919 - INFO - GDEF dropped
+20240125 14:05:05.919 - INFO - GPOS dropped
+20240125 14:05:05.919 - INFO - GSUB dropped
+20240125 14:05:05.920 - INFO - name pruned
+20240125 14:05:05.922 - INFO - glyf pruned
+20240125 14:05:05.923 - INFO - Added gid0 to subset
+20240125 14:05:05.923 - INFO - Added first four glyphs to subset
+20240125 14:05:05.923 - INFO - Closing glyph list over 'glyf': 27 glyphs before
+20240125 14:05:05.923 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0024', 'uni002C', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0041', 'uni0061', 'uni0062', 'uni0064', 'uni0065', 'uni006C', 'uni006E', 'uni0072', 'uni0078', 'uni007B', 'uni007D', 'uni00C4']
+20240125 14:05:05.923 - INFO - Glyph IDs:   [0, 1, 2, 3, 504, 575, 594, 612, 723, 759, 837, 945, 1262, 1294, 1295, 1296, 1298, 1299, 1300, 1302, 1303, 1304, 1305, 1345, 1346, 1403, 1681]
+20240125 14:05:05.924 - INFO - Closed glyph list over 'glyf': 27 glyphs after
+20240125 14:05:05.924 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0024', 'uni002C', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0041', 'uni0061', 'uni0062', 'uni0064', 'uni0065', 'uni006C', 'uni006E', 'uni0072', 'uni0078', 'uni007B', 'uni007D', 'uni00C4']
+20240125 14:05:05.924 - INFO - Glyph IDs:   [0, 1, 2, 3, 504, 575, 594, 612, 723, 759, 837, 945, 1262, 1294, 1295, 1296, 1298, 1299, 1300, 1302, 1303, 1304, 1305, 1345, 1346, 1403, 1681]
+20240125 14:05:05.924 - INFO - Retaining 27 glyphs
+20240125 14:05:05.925 - INFO - head subsetting not needed
+20240125 14:05:05.925 - INFO - hhea subsetting not needed
+20240125 14:05:05.925 - INFO - maxp subsetting not needed
+20240125 14:05:05.925 - INFO - OS/2 subsetting not needed
+20240125 14:05:05.926 - INFO - hmtx subsetted
+20240125 14:05:05.928 - INFO - cmap subsetted
+20240125 14:05:05.928 - INFO - prep subsetting not needed
+20240125 14:05:05.928 - INFO - loca subsetting not needed
+20240125 14:05:05.928 - INFO - post subsetted
+20240125 14:05:05.928 - INFO - gasp subsetting not needed
+20240125 14:05:05.928 - INFO - STAT subsetting not needed
+20240125 14:05:05.928 - INFO - name subsetting not needed
+20240125 14:05:05.929 - INFO - glyf subsetted
+20240125 14:05:05.929 - INFO - head pruned
+20240125 14:05:05.930 - INFO - OS/2 Unicode ranges pruned: [0]
+20240125 14:05:05.930 - INFO - glyf pruned
+20240125 14:05:05.951 - INFO - maxp pruned
+20240125 14:05:05.951 - INFO - cmap pruned
+20240125 14:05:05.951 - INFO - post pruned
+20240125 14:05:05.952 - INFO - GDEF dropped
+20240125 14:05:05.952 - INFO - GPOS dropped
+20240125 14:05:05.952 - INFO - GSUB dropped
+20240125 14:05:05.952 - INFO - name pruned
+20240125 14:05:05.955 - INFO - glyf pruned
+20240125 14:05:05.956 - INFO - Added gid0 to subset
+20240125 14:05:05.956 - INFO - Added first four glyphs to subset
+20240125 14:05:05.956 - INFO - Closing glyph list over 'glyf': 35 glyphs before
+20240125 14:05:05.956 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0041', 'uni0044', 'uni004E', 'uni0052', 'uni0054', 'uni0061', 'uni0062', 'uni0063', 'uni0065', 'uni0066', 'uni0067', 'uni0069', 'uni006C', 'uni006D', 'uni006E', 'uni0072', 'uni0073', 'uni0074', 'uni0075', 'uni007B', 'uni007D', 'uni00C4']
+20240125 14:05:05.956 - INFO - Glyph IDs:   [0, 1, 2, 3, 84, 299, 382, 409, 504, 575, 582, 612, 645, 650, 679, 723, 752, 759, 837, 867, 884, 899, 1294, 1295, 1296, 1298, 1299, 1300, 1302, 1303, 1304, 1305, 1345, 1346, 1681]
+20240125 14:05:05.956 - INFO - Closed glyph list over 'glyf': 35 glyphs after
+20240125 14:05:05.956 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0041', 'uni0044', 'uni004E', 'uni0052', 'uni0054', 'uni0061', 'uni0062', 'uni0063', 'uni0065', 'uni0066', 'uni0067', 'uni0069', 'uni006C', 'uni006D', 'uni006E', 'uni0072', 'uni0073', 'uni0074', 'uni0075', 'uni007B', 'uni007D', 'uni00C4']
+20240125 14:05:05.957 - INFO - Glyph IDs:   [0, 1, 2, 3, 84, 299, 382, 409, 504, 575, 582, 612, 645, 650, 679, 723, 752, 759, 837, 867, 884, 899, 1294, 1295, 1296, 1298, 1299, 1300, 1302, 1303, 1304, 1305, 1345, 1346, 1681]
+20240125 14:05:05.957 - INFO - Retaining 35 glyphs
+20240125 14:05:05.957 - INFO - head subsetting not needed
+20240125 14:05:05.957 - INFO - hhea subsetting not needed
+20240125 14:05:05.957 - INFO - maxp subsetting not needed
+20240125 14:05:05.957 - INFO - OS/2 subsetting not needed
+20240125 14:05:05.959 - INFO - hmtx subsetted
+20240125 14:05:05.961 - INFO - cmap subsetted
+20240125 14:05:05.961 - INFO - prep subsetting not needed
+20240125 14:05:05.961 - INFO - loca subsetting not needed
+20240125 14:05:05.961 - INFO - post subsetted
+20240125 14:05:05.961 - INFO - gasp subsetting not needed
+20240125 14:05:05.962 - INFO - STAT subsetting not needed
+20240125 14:05:05.962 - INFO - name subsetting not needed
+20240125 14:05:05.962 - INFO - glyf subsetted
+20240125 14:05:05.963 - INFO - head pruned
+20240125 14:05:05.963 - INFO - OS/2 Unicode ranges pruned: [0]
+20240125 14:05:05.964 - INFO - glyf pruned
+20240125 14:05:05.983 - INFO - maxp pruned
+20240125 14:05:05.984 - INFO - cmap pruned
+20240125 14:05:05.984 - INFO - post pruned
+20240125 14:05:05.984 - INFO - GDEF dropped
+20240125 14:05:05.984 - INFO - GPOS dropped
+20240125 14:05:05.984 - INFO - GSUB dropped
+20240125 14:05:05.984 - INFO - name pruned
+20240125 14:05:05.987 - INFO - glyf pruned
+20240125 14:05:05.989 - INFO - Added gid0 to subset
+20240125 14:05:05.989 - INFO - Added first four glyphs to subset
+20240125 14:05:05.989 - INFO - Closing glyph list over 'glyf': 18 glyphs before
+20240125 14:05:05.989 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0062', 'uni006E', 'uni007B', 'uni007D', 'uni00A0']
+20240125 14:05:05.990 - INFO - Glyph IDs:   [0, 1, 2, 3, 544, 727, 1256, 1257, 1258, 1260, 1261, 1262, 1264, 1265, 1266, 1267, 1307, 1308]
+20240125 14:05:05.990 - INFO - Closed glyph list over 'glyf': 18 glyphs after
+20240125 14:05:05.990 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0062', 'uni006E', 'uni007B', 'uni007D', 'uni00A0']
+20240125 14:05:05.990 - INFO - Glyph IDs:   [0, 1, 2, 3, 544, 727, 1256, 1257, 1258, 1260, 1261, 1262, 1264, 1265, 1266, 1267, 1307, 1308]
+20240125 14:05:05.990 - INFO - Retaining 18 glyphs
+20240125 14:05:05.991 - INFO - head subsetting not needed
+20240125 14:05:05.991 - INFO - hhea subsetting not needed
+20240125 14:05:05.991 - INFO - maxp subsetting not needed
+20240125 14:05:05.991 - INFO - OS/2 subsetting not needed
+20240125 14:05:05.992 - INFO - hmtx subsetted
+20240125 14:05:05.993 - INFO - cmap subsetted
+20240125 14:05:05.993 - INFO - loca subsetting not needed
+20240125 14:05:05.993 - INFO - post subsetted
+20240125 14:05:05.993 - INFO - name subsetting not needed
+20240125 14:05:05.994 - INFO - glyf subsetted
+20240125 14:05:05.994 - INFO - head pruned
+20240125 14:05:05.995 - INFO - OS/2 Unicode ranges pruned: [0]
+20240125 14:05:05.995 - INFO - glyf pruned
+20240125 14:05:06.010 - INFO - maxp pruned
+20240125 14:05:06.010 - INFO - cmap pruned
+20240125 14:05:06.010 - INFO - post pruned
+20240125 14:05:06.010 - INFO - GDEF dropped
+20240125 14:05:06.010 - INFO - GPOS dropped
+20240125 14:05:06.010 - INFO - GSUB dropped
+20240125 14:05:06.011 - INFO - name pruned
+20240125 14:05:06.013 - INFO - glyf pruned
+20240125 14:05:06.016 - INFO - Added gid0 to subset
+20240125 14:05:06.016 - INFO - Added first four glyphs to subset
+20240125 14:05:06.016 - INFO - Closing glyph list over 'glyf': 18 glyphs before
+20240125 14:05:06.016 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0062', 'uni006E', 'uni007B', 'uni007D', 'uni00A0']
+20240125 14:05:06.016 - INFO - Glyph IDs:   [0, 1, 2, 3, 544, 727, 1256, 1257, 1258, 1260, 1261, 1262, 1264, 1265, 1266, 1267, 1307, 1308]
+20240125 14:05:06.016 - INFO - Closed glyph list over 'glyf': 18 glyphs after
+20240125 14:05:06.017 - INFO - Glyph names: ['.notdef', '.null', 'uni0020', 'uni0030', 'uni0031', 'uni0032', 'uni0033', 'uni0034', 'uni0035', 'uni0036', 'uni0037', 'uni0038', 'uni0039', 'uni0062', 'uni006E', 'uni007B', 'uni007D', 'uni00A0']
+20240125 14:05:06.017 - INFO - Glyph IDs:   [0, 1, 2, 3, 544, 727, 1256, 1257, 1258, 1260, 1261, 1262, 1264, 1265, 1266, 1267, 1307, 1308]
+20240125 14:05:06.017 - INFO - Retaining 18 glyphs
+20240125 14:05:06.017 - INFO - head subsetting not needed
+20240125 14:05:06.017 - INFO - hhea subsetting not needed
+20240125 14:05:06.017 - INFO - maxp subsetting not needed
+20240125 14:05:06.017 - INFO - OS/2 subsetting not needed
+20240125 14:05:06.019 - INFO - hmtx subsetted
+20240125 14:05:06.019 - INFO - cmap subsetted
+20240125 14:05:06.020 - INFO - loca subsetting not needed
+20240125 14:05:06.020 - INFO - post subsetted
+20240125 14:05:06.020 - INFO - name subsetting not needed
+20240125 14:05:06.021 - INFO - glyf subsetted
+20240125 14:05:06.021 - INFO - head pruned
+20240125 14:05:06.021 - INFO - OS/2 Unicode ranges pruned: [0]
+20240125 14:05:06.021 - INFO - glyf pruned
+20240125 14:05:06.031 - INFO - +--- END KEYWORD: Autosphere.PDF.Template Html To Pdf (206)
+20240125 14:05:06.031 - INFO - +-- END KEYWORD: Convert HTML to PDF (206)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240125 14:05:06.031 - INFO - +-- START TEARDOWN: Log Out And Close The Browser [ ]
+20240125 14:05:06.032 - INFO - +--- START KEYWORD: Autosphere.Browser.Click Button [ Log out ]
+20240125 14:05:06.032 - INFO - Clicking button 'Log out'.
+20240125 14:05:06.079 - INFO - +--- END KEYWORD: Autosphere.Browser.Click Button (46)
+20240125 14:05:06.079 - INFO - +--- START KEYWORD: Autosphere.Browser.Close Browser [ ]
+20240125 14:05:06.079 - DEBUG - Closing browser with session id ac19010e97fdfe4950d3bbfdce0eb0c8.
+20240125 14:05:08.299 - INFO - +--- END KEYWORD: Autosphere.Browser.Close Browser (2220)
+20240125 14:05:08.299 - INFO - +-- END TEARDOWN: Log Out And Close The Browser (2268)
+------------------------------------------------------------------------------
+20240125 14:05:08.300 - INFO - +- END TEST: Creating PDF of the results (2521)
+------------------------------------------------------------------------------
+20240125 14:05:08.301 - INFO - + END SUITE: Wdu (19844)
+==============================================================================
